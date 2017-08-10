@@ -5,7 +5,7 @@ Hide your files in 'infinite' folders creating fake files in them.
 
 ## Usage
 
-python hider.py FILE CHARACTERS
+*python hider.py $FILE $CHARACTERS*
 
 ## Example
 
@@ -15,4 +15,4 @@ It creates one folder for every character recursively, so the true file gets sto
 
 ![Screenshot](img/Screenshot.png)
 
-And the real one is in ... y/z/x!
+And the real one is stored in ... *y/z/x/*!
