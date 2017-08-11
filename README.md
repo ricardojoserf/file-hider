@@ -1,4 +1,4 @@
-# total-hider
+# file-hider
 
 Hide your files in 'infinite' folders creating fake files in them.
 
