@@ -12,7 +12,7 @@ total = 0
 # Create fake dir
 try:
 	os.makedirs("fake")
-	os.makedirs("folders")
+	os.makedirs("result")
 except:
 	pass
 
@@ -22,7 +22,7 @@ fileSize = os.path.getsize(fileToStore)
 fileName = os.path.basename(fileToStore)
 with open(("fake/"+fileName), "wb") as f:
     f.seek(fileSize-1)
-    f.write("\0")
+    f.write(bytes(1))
 
 
 # Char list
@@ -32,7 +32,7 @@ for char in palabra:
 
 # Create all directories
 for combination in itertools.product( characters, repeat= len(palabra)):
-	path = "folders/"
+	path = "result/"
 	for char in combination:	
 		path = path + char +"/"
 	if path not in allPaths:
@@ -46,7 +46,7 @@ for combination in itertools.product( characters, repeat= len(palabra)):
 # Copy all files
 for path in allPaths:
 	try:
-		if path.replace("/","") == ("folders"+palabra):
+		if path.replace("/","") == ("result"+palabra):
 				os.system("cp "+fileToStore+" "+path)
 		else:
 				os.system("cp fake/"+fileName+" "+path)
