@@ -21,3 +21,8 @@ python hider.py file_to_hide.txt yzx
 ![Screenshot](img/Screenshot.png)
 
 As the second parameter is *yzx* the original file is stored in *y/z/x/*. All the other files are fake.
+
+
+## Note
+
+Tested both in Python2.x (2.7.15rc1) and Python 3.x (3.6.7)
